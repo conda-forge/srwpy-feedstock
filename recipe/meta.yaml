@@ -13,7 +13,7 @@ source:
     - 0001-cmake_args-osx_arm64.patch  # [build_platform != target_platform]
 
 build:
-  number: 2
+  number: 3
 
 requirements:
   build:
