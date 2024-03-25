@@ -1,5 +1,5 @@
 {% set name = "srwpy" %}
-{% set version = "4.0.0b1" %}
+{% set version = "4.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/ochubar/SRW/archive/refs/tags/{{ version }}.tar.gz
-  sha256: d9b80a01109933d154bd90423575e0395b366c280a52bd6054c35c274c95bc5d
+  sha256: 0b6c6f7829fe413909b2f3776af5471bec42a287789b2713912cf7117e416714
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -65,5 +65,5 @@ about:
 extra:
   recipe-maintainers:
     - himanshugoel2797
-    - hhslepicka 
+    - hhslepicka
     - mrakitin
