@@ -1,0 +1,25 @@
+From 5658764e6f187ca39a09c2275547abb17a9fb745 Mon Sep 17 00:00:00 2001
+From: Max Rakitin <mrakitin@bnl.gov>
+Date: Sun, 28 Apr 2024 13:53:21 -0400
+Subject: [PATCH] Fix no-implicit-int error
+
+---
+ cpp/src/ext/genesis/genesis_july08/main.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/cpp/src/ext/genesis/genesis_july08/main.c b/cpp/src/ext/genesis/genesis_july08/main.c
+index 52e8ad8..067dd1e 100644
+--- a/cpp/src/ext/genesis/genesis_july08/main.c
++++ b/cpp/src/ext/genesis/genesis_july08/main.c
+@@ -146,7 +146,7 @@ static integer c__1 = 1;
+ /*     ------------------------------------------------------------------ */
+ /*     main unit */
+ /*     ------------------------------------------------------------------ */
+-/* Main program */ MAIN__()
++/* Main program */ int MAIN__()
+ {
+     /* System generated locals */
+     integer i__1, i__2, i__3, i__4;
+-- 
+2.44.0
+
