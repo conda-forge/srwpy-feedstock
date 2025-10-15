@@ -1,5 +1,5 @@
 {% set name = "srwpy" %}
-{% set version = "4.1.0" %}
+{% set version = "4.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/ochubar/SRW/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 0b6c6f7829fe413909b2f3776af5471bec42a287789b2713912cf7117e416714
+  sha256: 5d47ff45e731a8479cb01a796977012e9c6998721f04e66ebb79856fbd32fdce
   patches:
     - 0001-Fix-no-implicit-int-error.patch
 
@@ -17,6 +17,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - cmake
     - make  # [not win]
@@ -26,12 +27,14 @@ requirements:
     # - libgomp      # [linux]
     - fftw  # [win]
     - fftw-static  # [osx or linux]
+    - setuptools
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - wget  # [build_platform != target_platform]
   host:
     - python
     - pip
+    - setuptools
   run:
     - python
     - fftw  # [win]
