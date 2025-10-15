@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/ochubar/SRW/archive/refs/tags/{{ version }}.tar.gz
-  sha256: e545a5fcf0fe5e238a566f5adae84ef167a582c57c22170b20f0c26a566781db
+  sha256: 5d47ff45e731a8479cb01a796977012e9c6998721f04e66ebb79856fbd32fdce
   patches:
     - 0001-Fix-no-implicit-int-error.patch
 
