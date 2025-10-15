@@ -27,6 +27,7 @@ requirements:
     # - libgomp      # [linux]
     - fftw  # [win]
     - fftw-static  # [osx or linux]
+    - setuptools
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - wget  # [build_platform != target_platform]
