@@ -1,5 +1,5 @@
 {% set name = "srwpy" %}
-{% set version = "4.1.1" %}
+{% set version = "4.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/ochubar/SRW/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 5d47ff45e731a8479cb01a796977012e9c6998721f04e66ebb79856fbd32fdce
+  sha256: a7b7c14a59857081f1f28c63da3275c6f31cd3c4bb69ef3a43616a5fa4e338f8
   patches:
     - 0001-Fix-no-implicit-int-error.patch
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
