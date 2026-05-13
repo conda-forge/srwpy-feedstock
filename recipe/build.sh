@@ -8,7 +8,8 @@ cd env/python
 # once the corresponding PyPI packages are generated.
 
 if [ "$(uname -s)" == "Darwin" ]; then
-    export CMAKE_ARGS='-DCMAKE_C_FLAGS="-Wno-c++11-narrowing -Wno-unused-command-line-argument" -DCMAKE_CXX_FLAGS="-Wno-c++11-narrowing -Wno-unused-command-line-argument"'
+    export CFLAGS="${CFLAGS} -Wno-c++11-narrowing -Wno-unused-command-line-argument"
+    export CXXFLAGS="${CXXFLAGS} -Wno-c++11-narrowing -Wno-unused-command-line-argument"
 fi
 
 
