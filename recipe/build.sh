@@ -8,7 +8,11 @@ cd env/python
 # once the corresponding PyPI packages are generated.
 
 if [ "$(uname -s)" == "Darwin" ]; then
-    export CMAKE_ARGS="-DCMAKE_C_FLAGS=-Wno-c++11-narrowing -DCMAKE_CXX_FLAGS=-Wno-c++11-narrowing"
+    export CFLAGS="${CFLAGS} -Wno-c++11-narrowing"
+    export CXXFLAGS="${CXXFLAGS} -Wno-c++11-narrowing"
+    if [ "${target_platform}" == "osx-arm64" ]; then
+        sed -i.bak 's/-mfma//g' ../../cpp/cmake/CMakeLists.txt
+    fi
 fi
 
 
