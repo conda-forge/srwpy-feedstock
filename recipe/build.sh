@@ -10,7 +10,7 @@ cd env/python
 if [ "$(uname -s)" == "Darwin" ]; then
     export CFLAGS="${CFLAGS} -Wno-c++11-narrowing"
     export CXXFLAGS="${CXXFLAGS} -Wno-c++11-narrowing"
-    if [ "$(uname -m)" == "arm64" ]; then
+    if [ "${target_platform}" == "osx-arm64" ]; then
         sed -i.bak 's/-mfma//g' ../../cpp/cmake/CMakeLists.txt
     fi
 fi
