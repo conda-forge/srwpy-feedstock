@@ -1,5 +1,5 @@
 {% set name = "srwpy" %}
-{% set version = "4.2.0" %}
+{% set version = "4.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/ochubar/SRW/archive/refs/tags/{{ version }}.tar.gz
-  sha256: e299a444acd390f1d1302246e038aefa953af534cbd58fa9c7e17ab1dfab0330
+  sha256: f7cc9ded8914e2e608f9093b8e5ea7fd3226f42fbc2a7569db9036c470824797
 
 build:
   number: 0
